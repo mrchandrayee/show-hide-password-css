@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <title>Show / Hide Password | CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="heading">
+      <p class="eyebrow">#MZcode <span>#HTML</span> <span>#CSS</span></p>
+      <h1><span>Show/Hide</span> Password <small>| CSS</small></h1>
+      <p class="subtitle">A simple password visibility toggle</p>
+    </header>
+
+    <section class="demo" aria-label="Password visibility demo">
+      <form id="password-form" autocomplete="on">
+        <label class="sr-only" for="password">Password</label>
+        <div class="password-wrap">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            spellcheck="false"
+            required
+          >
+          <button
+            class="pass-icon"
+            id="pass-icon"
+            type="button"
+            aria-label="Show password"
+            aria-pressed="false"
+            aria-controls="password"
+          >
+            <svg class="eye eye-open" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="eye eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8"/>
+              <path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.1 3.8M6.2 6.2C3.5 8 2 12 2 12s3.6 7 10 7a10 10 0 0 0 4-.8"/>
+            </svg>
+          </button>
+        </div>
+        <p class="hint" id="hint">Your password is hidden.</p>
+      </form>
+    </section>
+
+    <section class="code-preview" aria-label="Code shown in the reference video">
+      <article class="code-card">
+        <div class="code-title"><span class="dots"><i></i><i></i><i></i></span>HTML</div>
+        <pre><code>&lt;div class="password-wrap"&gt;
+  &lt;input id="password" type="password"&gt;
+  &lt;button class="pass-icon" id="pass-icon"&gt;...&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </article>
+      <article class="code-card">
+        <div class="code-title"><span class="dots"><i></i><i></i><i></i></span>CSS</div>
+        <pre><code>.pass-icon {
+  position: absolute;
+  top: 23px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}</code></pre>
+      </article>
+    </section>
+    <footer>HTML · CSS · JAVASCRIPT <span>INTERACTIVE DEMO</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
